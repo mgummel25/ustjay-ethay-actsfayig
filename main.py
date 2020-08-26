@@ -16,6 +16,7 @@ def get_fact():
 
     return facts[0].getText()
 
+
 def pig_latinize(payload):
     url = "https://hidden-journey-62459.herokuapp.com/piglatinize/"
     input_data = {
@@ -27,6 +28,7 @@ def pig_latinize(payload):
 
     return url_location
 
+
 @app.route('/', methods=['GET', 'POST'])
 def home():
     random_quote = get_fact()
@@ -37,4 +39,3 @@ def home():
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 6787))
     app.run(host='0.0.0.0', port=port)
-

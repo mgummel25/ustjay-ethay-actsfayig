@@ -29,7 +29,7 @@ def pig_latinize(payload):
     return url_location
 
 
-@app.route('/', methods=['GET', 'POST'])
+@app.route('/', methods=['GET'])
 def home():
     random_quote = get_fact()
     url = pig_latinize(random_quote)
